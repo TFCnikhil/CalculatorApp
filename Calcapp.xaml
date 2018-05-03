@@ -1,0 +1,90 @@
+/*
+add this code after opening of window tag 
+*/
+<Window.Resources>
+            
+        <Style TargetType="Label">
+            <Setter Property="Width" Value="52" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Margin" Value="20,20,0,0" />
+            <Setter Property="Background" Value="Beige" />
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="FontWeight" Value="Bold"  />
+            <Setter Property="Padding" Value="14"/>
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+
+        </Style>
+        <Style TargetType="TextBox" x:Key="txtFieldStyles">
+            <Setter Property="Margin" Value="20,20,0,0" />
+            <Setter Property="Width" Value="280" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="8" />
+        </Style>
+        <Style TargetType="Label" x:Key="btnLeftMargin">
+            <Setter Property="Margin" Value="25,20,20,0" />
+            <Setter Property="Width" Value="58" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel Background="Black" Margin="0,0,0,0">
+        <WrapPanel>
+            <TextBox x:Name="txtDualIO" Style="{StaticResource txtFieldStyles}"/>
+        </WrapPanel>
+        <WrapPanel>
+            <Label x:Name="btnSeven" Content="7">
+
+            </Label>
+            <Label x:Name="btnEight" Content="8" >
+
+            </Label>
+            <Label x:Name="btnNine" Content="9" >
+
+            </Label>
+            <Label x:Name="btnDiv" Content="/"  />
+        </WrapPanel>
+        
+        <WrapPanel>
+            <Label x:Name="btnFour" Content="4">
+
+            </Label>
+            <Label x:Name="btnFive" Content="5">
+
+            </Label>
+            <Label x:Name="btnSix" Content="{Binding Name=txtDualIO, Mode=OneWay}" >
+
+            </Label>
+            <Label x:Name="btnMult" Content="*"   />
+        </WrapPanel>
+        
+        <WrapPanel>
+            
+            <Label x:Name="btnOne" Content="1">
+
+            </Label>
+            <Label x:Name="btnTwo" Content="2">
+
+            </Label>
+            <Label x:Name="btnThree" Content="3">
+
+            </Label>
+            <Label x:Name="btnSub" Content="-" />
+        </WrapPanel>
+
+        <WrapPanel Margin="0,0,0,20">
+            <Label x:Name="btnClear" Content="C">
+
+            </Label>
+            <Label x:Name="btnZero" Content="0">
+
+            </Label>
+            <Label x:Name="btnResult" Content="=">
+
+            </Label>
+            <Label x:Name="btnAdd" Content="+"  />
+        </WrapPanel>
+    </StackPanel>
